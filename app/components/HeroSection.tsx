@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 export function HeroSection() {
-    return <div className="p-8 bg-blue-300/10 0">
+    return <div className="p-8 px-32 bg-blue-300/10 0">
         <div className="flex flex-column m-8">
             <Image
-                src={"/rong.png"}
-                width={3872/5}
-                height={2592/5}
+                src={"/johan.jpg"}
+                width={500}
+                height={500}
                 alt="Rong"
                 className="rounded-4xl border-4 border-gray-400"
                 />

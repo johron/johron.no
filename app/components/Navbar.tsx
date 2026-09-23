@@ -8,7 +8,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ links }: NavbarProps) {
-    return <div className="flex flex-column p-4 px-8 bg-gray-950/60 justify-between">
+    return <div className="flex flex-column p-4 px-8 bg-gray-950/60 justify-between fixed w-full">
         <div className="text-5xl font-bold">
             Johan Rong
         </div>
