@@ -1,5 +1,6 @@
 import { HeroSection } from "./components/HeroSection";
 import { Navbar } from "./components/Navbar";
+import { ProjectsSection } from "./components/ProjectsSection";
 
 const links = [
   {
@@ -24,9 +25,9 @@ export default function Home() {
   return (
     <div className="">
       <Navbar links={links}/>
-      <HeroSection />
       <main className="">
-        hei eg heiter johan
+        <HeroSection />
+        <ProjectsSection />
       </main>
     </div>
   );
