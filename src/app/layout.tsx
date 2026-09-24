@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import localFont from "next/font/local";
-import { Google_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Navbar } from "../components/Navbar";
 
-const googleSans = Google_Sans({
+const googleSans = Inter({
   variable: '--font-google-sans',
   subsets: ['latin'],
   display: 'swap',
