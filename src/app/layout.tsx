@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import localFont from "next/font/local";
 import { Google_Sans } from 'next/font/google'
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "../components/Navbar";
 
 const googleSans = Google_Sans({
   variable: '--font-google-sans',
@@ -13,37 +13,37 @@ const googleSans = Google_Sans({
 const acorn = localFont({
   src: [
     {
-      path: "./fonts/Acorn/TrialAcorn-Thin.otf",
+      path: "../fonts/Acorn/TrialAcorn-Thin.otf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "./fonts/Acorn/TrialAcorn-ExtraLight.otf",
+      path: "../fonts/Acorn/TrialAcorn-ExtraLight.otf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "./fonts/Acorn/TrialAcorn-Light.otf",
+      path: "../fonts/Acorn/TrialAcorn-Light.otf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./fonts/Acorn/TrialAcorn-Regular.otf",
+      path: "../fonts/Acorn/TrialAcorn-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/Acorn/TrialAcorn-Medium.otf",
+      path: "../fonts/Acorn/TrialAcorn-Medium.otf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/Acorn/TrialAcorn-SemiBold.otf",
+      path: "../fonts/Acorn/TrialAcorn-SemiBold.otf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "./fonts/Acorn/TrialAcorn-Bold.otf",
+      path: "../fonts/Acorn/TrialAcorn-Bold.otf",
       weight: "700",
       style: "normal",
     },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   description: "Personleg portefølje",
 }
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
