@@ -1,13 +1,15 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import localFont from "next/font/local";
-import { Inter } from 'next/font/google'
+import { Google_Sans } from 'next/font/google'
 import { Navbar } from "../components/Navbar";
 
-const googleSans = Inter({
+const googleSans = Google_Sans({
   variable: '--font-google-sans',
   subsets: ['latin'],
   display: 'swap',
+  adjustFontFallback: false,
+   fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
 
 const acorn = localFont({
