@@ -4,10 +4,13 @@ import { PropsWithChildren, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LayoutGroup, motion } from "framer-motion";
-import { IconButton } from "./IconButton";
+import { IconButton } from "@/components/IconButton";
 import {
+    IconBrandGithub,
+    IconBrandGithubFilled,
   IconLanguage,
 } from "@tabler/icons-react"
+import { IconLink } from "@/components/IconLink";
 
 type NavbarButtonProps = PropsWithChildren<{
     href: string;
@@ -57,14 +60,19 @@ export function Navbar() {
                     <NavbarButton href="/" isActive={pathname === "/"}>Arbeid</NavbarButton>
                     <NavbarButton href="/om-meg" isActive={pathname === "/om-meg"}>Om meg</NavbarButton>
                     <NavbarButton href="/meir" isActive={pathname === "/meir"}>Meir</NavbarButton>
-                    <NavbarButton href="/kontakt" isActive={pathname === "/kontakt"}>Kontakt</NavbarButton>
+                    <NavbarButton href="/kontakt-meg" isActive={pathname === "/kontakt-meg"}>Kontakt meg</NavbarButton>
                     <IconButton
-                        className="px-6"
                         icon={IconLanguage}
                         onClick={() => {
                             console.log("pressed")
                         }
                     }/>
+                    <IconLink
+                        className="px-6"
+                        icon={IconBrandGithub}
+                        href="https://github.com/johron/johron.no"
+                        openInNewTab={true}
+                    />
                 </div>
             </LayoutGroup>
         </div>

@@ -9,7 +9,7 @@ interface IconButtonProps {
 }
 
 export function IconButton({ className, icon, onClick }: IconButtonProps) {
-     const IconComponent = icon
+    const IconComponent = icon
 
     return <button
         type="button"

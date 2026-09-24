@@ -20,7 +20,7 @@ export function IconLink({ className, icon, href, openInNewTab }: IconLinkProps)
             target={openInNewTab ? "_blank" : undefined}
             rel={openInNewTab ? "noopener noreferrer" : undefined}
         >
-            <IconComponent className={`h-6 w-6 ${className}`} />
+            <IconComponent className={`h-6 w-6}`} />
         </Link>
     );
 }
