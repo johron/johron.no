@@ -7,8 +7,7 @@ import { LayoutGroup, motion } from "framer-motion";
 import { IconButton } from "@/components/IconButton";
 import {
     IconBrandGithub,
-    IconBrandGithubFilled,
-  IconLanguage,
+    IconLanguage,
 } from "@tabler/icons-react"
 import { IconLink } from "@/components/IconLink";
 
