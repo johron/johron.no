@@ -19,6 +19,6 @@ export function HeroSection() {
             >{hovered ? "/juˈhaːn/" : "Johan"}</motion.span></AcornText>
             <AcornText className="text-9xl">Ein Programmerar</AcornText>
         </div>
-        <Text className="text-[#d3e1dc]">Informatikk med spesialisering i nynorske operativsystem</Text>
+        <Text className="text-[#d3e1dc]">Nettsida er framleis under utvikling</Text>
     </div>
 }
