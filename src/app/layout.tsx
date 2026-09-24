@@ -64,7 +64,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <body>
         <Navbar />
-        <div className="min-h-full flex flex-col">{children}</div>
+        <div className="min-h-full pt-40 flex flex-col py-12">{children}</div>
       </body>
     </html>
   )
