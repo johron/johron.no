@@ -4,11 +4,13 @@ import { AcornText } from "@/components/AcornText"
 import { Text } from "@/components/Text"
 import { IconSchool } from "@tabler/icons-react"
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 
 export function HeroSection() {
+    const t = useTranslations('HeroSection')
     const [hovered, setHovered] = useState(false)
 
     return (
@@ -19,18 +21,18 @@ export function HeroSection() {
                 </div>
                 <div className="flex flex-col w-full justify-center text-center gap-12">
                     <div>
-                        <AcornText className="text-9xl">Hei, eg er <motion.span
+                        <AcornText className="text-9xl">{t("title1")} <motion.span
                             className="inline-block text-[#0ab9af]"
                             onMouseEnter={() => setHovered(true)}
                             onMouseLeave={() => setHovered(false)}
                             animate={{ scale: hovered ? 1.08 : 1, y: hovered ? -2 : 0 }}
                             transition={{ type: "spring", stiffness: 500, damping: 10 }}
                         >{hovered ? "/juˈhaːn/" : "Johan"}</motion.span></AcornText>
-                        <AcornText className="text-9xl">Ein programmerar</AcornText>
+                        <AcornText className="text-9xl">{t("title2")}</AcornText>
                     </div>
                 </div>
             </div>
-            <Text className="text-[#d3e1dc] flex gap-2">Hobbyprogrammerar i 7+ år og ny informatikkstudent ved <Link href="https://www.ntnu.no/" target="_blank" className="underline">NTNU</Link> i Trondheim <IconSchool /></Text>
+            <Text className="text-[#d3e1dc] flex gap-2">{t("subtitle1")}<Link href="https://www.ntnu.no/" target="_blank" className="underline">NTNU</Link>{t("subtitle2")}<IconSchool /></Text>
         </div>
     )
 }

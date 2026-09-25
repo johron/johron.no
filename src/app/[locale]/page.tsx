@@ -1,7 +1,7 @@
 "use client"
 
 import { ProjectsSection } from "@/components/ProjectsSection"
-import { HeroSection } from "../components/HeroSection"
+import { HeroSection } from "../../components/HeroSection"
 import { IconAlbum, IconBrandGithub } from "@tabler/icons-react"
 
 const utvikling = [

@@ -10,7 +10,7 @@ export function Footer() {
                     <Text size="text-md">
                         <span className="inline-flex items-center gap-1 leading-none">
                             <span className="align-middle text-[1.4em] leading-none">©</span>
-                            <span>2026 Johan Rong</span>
+                            <span>2026 Johan Rong - <Link href="https://github.com/johron/johron.no" className="underline">Source code</Link></span>
                         </span>
                     </Text>
                     <Text>TrialAcorn av <Link className="underline" href="https://typeverything.com/" target="_blank">Typeverything</Link> for overskrifter</Text>

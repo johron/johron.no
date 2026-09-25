@@ -2,8 +2,12 @@ import type { Metadata } from "next"
 import "./globals.css"
 import localFont from "next/font/local"
 import { Google_Sans } from 'next/font/google'
-import { Navbar } from "../components/Navbar"
+import { Navbar } from "../../components/Navbar"
 import { Footer } from "@/components/Footer"
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
+import { notFound } from 'next/navigation'
+
 
 const googleSans = Google_Sans({
   variable: '--font-google-sans',
@@ -16,37 +20,37 @@ const googleSans = Google_Sans({
 const acorn = localFont({
   src: [
     {
-      path: "../fonts/Acorn/TrialAcorn-Thin.otf",
+      path: "../../fonts/Acorn/TrialAcorn-Thin.otf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../fonts/Acorn/TrialAcorn-ExtraLight.otf",
+      path: "../../fonts/Acorn/TrialAcorn-ExtraLight.otf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../fonts/Acorn/TrialAcorn-Light.otf",
+      path: "../../fonts/Acorn/TrialAcorn-Light.otf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../fonts/Acorn/TrialAcorn-Regular.otf",
+      path: "../../fonts/Acorn/TrialAcorn-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/Acorn/TrialAcorn-Medium.otf",
+      path: "../../fonts/Acorn/TrialAcorn-Medium.otf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../fonts/Acorn/TrialAcorn-SemiBold.otf",
+      path: "../../fonts/Acorn/TrialAcorn-SemiBold.otf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../fonts/Acorn/TrialAcorn-Bold.otf",
+      path: "../../fonts/Acorn/TrialAcorn-Bold.otf",
       weight: "700",
       style: "normal",
     },
@@ -59,16 +63,24 @@ export const metadata: Metadata = {
   description: "Personleg portefølje",
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{ locale: string }> }>) {
+  const { locale } = await params
+
+  if (!['nn', 'en'].includes(locale)) notFound()
+
+  const messages = await getMessages()
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${googleSans.variable} ${acorn.variable} h-full antialiased`}
     >
       <body>
-        <Navbar />
-        <div className="min-h-full pt-40 flex flex-col py-12">{children}</div>
-        <Footer />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navbar />
+          <div className="min-h-full pt-40 flex flex-col py-12">{children}</div>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   )
