@@ -1,7 +1,7 @@
 "use client"
 
-import { ProjectsSection } from "@/components/ProjectsSection";
-import { HeroSection } from "../components/HeroSection";
+import { ProjectsSection } from "@/components/ProjectsSection"
+import { HeroSection } from "../components/HeroSection"
 
 const utvikling = [
   {
@@ -38,5 +38,5 @@ export default function Home() {
         </div>
       </main>
     </div>
-  );
+  )
 }

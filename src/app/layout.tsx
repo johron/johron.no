@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import localFont from "next/font/local";
+import localFont from "next/font/local"
 import { Google_Sans } from 'next/font/google'
-import { Navbar } from "../components/Navbar";
+import { Navbar } from "../components/Navbar"
+import { Footer } from "@/components/Footer"
 
 const googleSans = Google_Sans({
   variable: '--font-google-sans',
@@ -10,7 +11,7 @@ const googleSans = Google_Sans({
   display: 'swap',
   adjustFontFallback: false,
    fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
-});
+})
 
 const acorn = localFont({
   src: [
@@ -51,7 +52,7 @@ const acorn = localFont({
     },
   ],
   variable: "--font-acorn",
-});
+})
 
 export const metadata: Metadata = {
   title: "Johan Rong",
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <Navbar />
         <div className="min-h-full pt-40 flex flex-col py-12">{children}</div>
+        <Footer />
       </body>
     </html>
   )

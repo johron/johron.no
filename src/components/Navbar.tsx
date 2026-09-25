@@ -1,15 +1,15 @@
 "use client"
 
-import { PropsWithChildren, useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { LayoutGroup, motion } from "framer-motion";
-import { IconButton } from "@/components/IconButton";
+import { PropsWithChildren, useEffect, useState } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { LayoutGroup, motion } from "framer-motion"
+import { IconButton } from "@/components/IconButton"
 import {
     IconBrandGithub,
     IconLanguage,
 } from "@tabler/icons-react"
-import { IconLink } from "@/components/IconLink";
+import { IconLink } from "@/components/IconLink"
 
 type NavbarButtonProps = PropsWithChildren<{
     href: string;
@@ -41,16 +41,16 @@ function NavbarButton({ children, href, isActive }: NavbarButtonProps) {
 }
 
 export function Navbar() {
-    const pathname = usePathname();
-    const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname()
+    const [isScrolled, setIsScrolled] = useState(false)
 
     useEffect(() => {
-        if (typeof window === "undefined") return;
-        const onScroll = () => setIsScrolled(window.scrollY > 0);
-        onScroll();
-        window.addEventListener("scroll", onScroll, { passive: true });
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+        if (typeof window === "undefined") return
+        const onScroll = () => setIsScrolled(window.scrollY > 0)
+        onScroll()
+        window.addEventListener("scroll", onScroll, { passive: true })
+        return () => window.removeEventListener("scroll", onScroll)
+    }, [])
 
     return (
         <div className="flex my-8 w-full justify-center fixed z-9999">
@@ -69,7 +69,7 @@ export function Navbar() {
                     <IconLink
                         className="px-6"
                         icon={IconBrandGithub}
-                        href="https://github.com/johron/johron.no"
+                        href="https://github.com/johron/"
                         openInNewTab={true}
                     />
                 </div>

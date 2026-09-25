@@ -1,0 +1,4 @@
+{
+  "js/ts.format.semicolons": "remove",
+  "js/js.format.semicolons": "remove"
+}

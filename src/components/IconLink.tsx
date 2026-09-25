@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link";
-import { ComponentType } from "react";
+import Link from "next/link"
+import { ComponentType } from "react"
 
 interface IconLinkProps {
     className?: string,
@@ -22,5 +22,5 @@ export function IconLink({ className, icon, href, openInNewTab }: IconLinkProps)
         >
             <IconComponent className={`h-6 w-6}`} />
         </Link>
-    );
+    )
 }
