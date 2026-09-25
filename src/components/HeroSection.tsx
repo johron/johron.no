@@ -2,8 +2,10 @@
 
 import { AcornText } from "@/components/AcornText"
 import { Text } from "@/components/Text"
+import { IconSchool } from "@tabler/icons-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 
 export function HeroSection() {
@@ -13,7 +15,7 @@ export function HeroSection() {
         <div className="flex flex-col justify-center items-center">
             <div className="flex">
                 <div className="flex justify-center items-center">
-                    <Image src="/johan.png" alt="" width="400" height="400" className="border-6 border-[#0ab9af] rounded-full" />
+                    <Image src="/johan.png" alt="" width="400" height="400" />
                 </div>
                 <div className="flex flex-col w-full justify-center text-center gap-12">
                     <div>
@@ -28,7 +30,7 @@ export function HeroSection() {
                     </div>
                 </div>
             </div>
-            <Text className="text-[#d3e1dc]">Hobbyprogrammerar i 7+ år og ny informatikkstudent ved NTNU i Trondheim</Text>
+            <Text className="text-[#d3e1dc] flex gap-2">Hobbyprogrammerar i 7+ år og ny informatikkstudent ved <Link href="https://www.ntnu.no/" target="_blank" className="underline">NTNU</Link> i Trondheim <IconSchool /></Text>
         </div>
     )
 }

@@ -5,7 +5,6 @@
   --font-google-sans: var(--font-google-sans);
 }
 
-
 :root {
   --background: #0e100f;
   --foreground: #fffce1;
@@ -15,4 +14,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #4f7668;
 }

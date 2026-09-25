@@ -1,11 +1,11 @@
 "use client"
 
+import { Icon } from "@tabler/icons-react"
 import Link from "next/link"
-import { ComponentType } from "react"
 
 interface IconLinkProps {
     className?: string,
-    icon: ComponentType<{ className?: string }>
+    icon: Icon
     href: string,
     openInNewTab?: boolean,
 }

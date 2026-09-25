@@ -1,10 +1,10 @@
 "use client"
 
-import { ComponentType } from "react"
+import { Icon } from "@tabler/icons-react"
 
 interface IconButtonProps {
     className?: string,
-    icon: ComponentType<{ className?: string }>
+    icon: Icon
     onClick: () => void,
 }
 

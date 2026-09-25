@@ -8,6 +8,7 @@ import { IconButton } from "@/components/IconButton"
 import {
     IconBrandGithub,
     IconLanguage,
+    IconSlash,
 } from "@tabler/icons-react"
 import { IconLink } from "@/components/IconLink"
 
@@ -21,7 +22,7 @@ function NavbarButton({ children, href, isActive }: NavbarButtonProps) {
         <Link 
             href={href}
             className={`
-                relative z-10 text-lg px-6 font-semibold text-[#fffce1]/80 p-2 m-3 rounded-full transition-colors duration-300 ease-out
+                relative z-10 text-lg px-6 font-semibold text-[#fffce1]/80 p-2 m-3 rounded-full transition-colors duration-300 ease-out flex gap-2
                 ${isActive
                     ? "text-white"
                     : "hover:text-white"
@@ -55,11 +56,11 @@ export function Navbar() {
     return (
         <div className="flex my-8 w-full justify-center fixed z-9999">
             <LayoutGroup>
-                <div className={`flex rounded-full justify-between items-center bg-transparent transition-colors duration-300 ease-out ${isScrolled ? 'bg-black/30 backdrop-blur-sm' : ''}`}>
-                    <NavbarButton href="/" isActive={pathname === "/"}>Arbeid</NavbarButton>
-                    <NavbarButton href="/om-meg" isActive={pathname === "/om-meg"}>Om meg</NavbarButton>
+                <div className={`flex rounded-full border border-[#4f7668]/20 justify-between items-center bg-transparent transition-colors duration-300 ease-out ${isScrolled ? 'bg-black/30 backdrop-blur-sm' : ''}`}>
+                    <NavbarButton href="/" isActive={pathname === "/" || pathname.startsWith("/arbeid/")}>Arbeid<IconSlash /></NavbarButton>
+                    <NavbarButton href="/om" isActive={pathname === "/om"}>Om</NavbarButton>
                     <NavbarButton href="/meir" isActive={pathname === "/meir"}>Meir</NavbarButton>
-                    <NavbarButton href="/kontakt-meg" isActive={pathname === "/kontakt-meg"}>Kontakt meg</NavbarButton>
+                    <NavbarButton href="/kontakt" isActive={pathname === "/kontakt"}>Kontakt</NavbarButton>
                     <IconButton
                         icon={IconLanguage}
                         onClick={() => {
