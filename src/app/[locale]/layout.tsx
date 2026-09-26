@@ -75,7 +75,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
       lang={locale}
       className={`${googleSans.variable} ${acorn.variable} h-full antialiased`}
     >
-      <body>
+      <body className="flex flex-col min-h-screen">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <div className="min-h-full pt-40 flex flex-col py-12">{children}</div>

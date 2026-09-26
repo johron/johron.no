@@ -7,7 +7,7 @@ export function Footer() {
     const t = useTranslations("footer")
 
     return (
-        <div className="flex w-full py-12 justify-center">
+        <footer className="flex w-full py-12 justify-center mt-auto">
             <div className="flex w-4xl max-w-4xl justify-between">
                 <div className="flex flex-col-reverse">
                     <Text size="text-md">
@@ -28,6 +28,6 @@ export function Footer() {
                     </Link>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
