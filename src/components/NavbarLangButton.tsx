@@ -57,7 +57,7 @@ export function NavbarLangButton() {
         <div ref={menuRef} className="relative">
             <button
                 type="button"
-                className={`flex items-center rounded-full px-4 py-2 text-sm font-semibold text-[#fffce1]/80 transition-colors duration-300 ease-out hover:text-white ${isOpen ? "bg-white/10 text-white" : ""}`}
+                className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-[#fffce1]/80 transition-colors duration-300 ease-out hover:text-white ${isOpen ? "bg-white/10 text-white" : ""}`}
                 aria-haspopup="menu"
                 aria-expanded={isOpen}
                 onClick={() => setIsOpen((value) => !value)}
