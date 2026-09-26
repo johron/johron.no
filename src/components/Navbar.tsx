@@ -22,7 +22,7 @@ function NavbarButton({ children, href, isActive }: NavbarButtonProps) {
         <Link 
             href={href}
             className={`
-                relative z-10 text-lg px-6 font-semibold text-[#fffce1]/80 p-2 m-3 rounded-full transition-colors duration-300 ease-out flex gap-2
+                relative z-10 text-lg px-6 font-semibold text-[#fffce1]/80 p-2 m-3 rounded-full transition-colors duration-300 ease-out flex gap-2 hover:bg-white/2
                 ${isActive
                     ? "text-white"
                     : "hover:text-white"
