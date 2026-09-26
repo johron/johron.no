@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import "./globals.css"
+import "@/app/globals.css"
 import localFont from "next/font/local"
 import { Google_Sans } from 'next/font/google'
 import { Navbar } from "../../components/Navbar"

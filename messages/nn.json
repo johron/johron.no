@@ -12,6 +12,11 @@
         "source": "Kildekode",
         "external": "Andre stadar"
     },
+    "notFound": {
+        "title": "Siden vart ikkje funne",
+        "description": "Me fann ikkje sida du leita etter",
+        "home": "Gå heim"
+    },
     "workPage": {
         "hero": {
             "title1": "Hei, eg er",

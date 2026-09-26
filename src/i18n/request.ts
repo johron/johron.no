@@ -2,20 +2,21 @@ import * as rootParams from 'next/root-params'
 import { getRequestConfig } from 'next-intl/server'
 import { hasLocale } from 'next-intl'
 import { routing } from '@/i18n/routing'
-import { notFound } from 'next/navigation'
 
 export default getRequestConfig(async ({ locale }) => {
-  if (!locale) {
+  let activeLocale = locale
+
+  if (!activeLocale) {
     const paramValue = await rootParams.locale()
     if (hasLocale(routing.locales, paramValue)) {
-      locale = paramValue
+      activeLocale = paramValue
     } else {
-      notFound()
+      activeLocale = routing.defaultLocale 
     }
   }
 
   return {
-    locale,
-    messages: (await import(`../../messages/${locale}.json`)).default
+    locale: activeLocale,
+    messages: (await import(`../../messages/${activeLocale}.json`)).default
   }
 })

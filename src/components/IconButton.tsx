@@ -14,9 +14,8 @@ export function IconButton({ className, icon, onClick }: IconButtonProps) {
     return (
         <button
             type="button"
-            className={`hover:text-white ${className || ""}`}
+            className={`hover:text-white cursor-pointer ${className || ""}`}
             onClick={onClick}
-            style={{ cursor: "pointer" }}
         >
             <IconComponent />
         </button>

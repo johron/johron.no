@@ -12,6 +12,11 @@
         "source": "Source code",
         "external": "External sites"
     },
+    "notFound": {
+        "title": "Page not found",
+        "description": "We couldn't find that page",
+        "home": "Go home"
+    },
     "workPage": {
         "hero": {
             "title1": "Hey! I'm",
