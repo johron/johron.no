@@ -10,7 +10,7 @@ import Link from "next/link"
 import { useState } from "react"
 
 export function HeroSection() {
-    const t = useTranslations('HeroSection')
+    const t = useTranslations('workPage.hero')
     const [hovered, setHovered] = useState(false)
 
     return (

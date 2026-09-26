@@ -1,8 +1,42 @@
 {
-    "HeroSection": {
-        "title1": "Hei, eg er",
-        "title2": "Ein programmerar",
-        "subtitle1": "Hobbyprogrammerar i 7+ år og ny informatikkstudent ved",
-        "subtitle2": "i Trondheim"
+    "navbar": {
+        "work": "Arbeid",
+        "about": "Om",
+        "more": "Meir",
+        "contact": "Kontakt",
+        "activeLabel": "Aktiv"
+    },
+    "footer": {
+        "fontNotice1": "TrialAcorn av",
+        "fontNotice2": "for overskrifter",
+        "source": "Kildekode",
+        "external": "Andre stadar"
+    },
+    "workPage": {
+        "hero": {
+            "title1": "Hei, eg er",
+            "title2": "Ein programmerar",
+            "subtitle1": "Hobbyprogrammerar i 7+ år og ny informatikkstudent ved",
+            "subtitle2": "i Trondheim"
+        },
+        "inProgress": {
+            "title": "Under utvikling",
+            "moose": {
+                "description": "Terminalbasert teksteditor skrive i Go, inspirert av Emacs, Vim og VS Code"
+            }
+        },
+        "inHibernation": {
+            "title": "I dvale",
+            "glare": {
+                "description": "Modulær, cross-platform game-engine bygd i Kotlin ved hjelp av LWJGL og OpenGL"
+            },
+            "zelkel": {
+                "description": "Low-level objektorientert programmeringsspråk"
+            }
+        }
+    },
+    "aboutPage": {
+        "title": "Om meg",
+        "paragraph": "Eg har vore hobbyprogrammerar i omkring 7 år og har nyleg byrja på informatikkstudiet ved NTNU i Trondheim"
     }
 }

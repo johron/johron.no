@@ -1,4 +1,3 @@
-// src/i18n/request.ts
 import * as rootParams from 'next/root-params'
 import { getRequestConfig } from 'next-intl/server'
 import { hasLocale } from 'next-intl'
@@ -11,7 +10,7 @@ export default getRequestConfig(async ({ locale }) => {
     if (hasLocale(routing.locales, paramValue)) {
       locale = paramValue
     } else {
-      notFound() // or fall back to routing.defaultLocale
+      notFound()
     }
   }
 

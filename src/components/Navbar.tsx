@@ -10,6 +10,7 @@ import {
 } from "@tabler/icons-react"
 import { IconLink } from "@/components/IconLink"
 import { NavbarLangButton } from "@/components/NavbarLangButton"
+import { useTranslations } from "next-intl"
 
 type NavbarButtonProps = PropsWithChildren<{
     href: string;
@@ -41,6 +42,7 @@ function NavbarButton({ children, href, isActive }: NavbarButtonProps) {
 }
 
 export function Navbar() {
+    const t = useTranslations("navbar")
     const pathname = usePathname()
     const [isScrolled, setIsScrolled] = useState(false)
 
@@ -56,13 +58,11 @@ export function Navbar() {
         <div className="flex my-8 w-full justify-center fixed z-9999">
             <LayoutGroup>
                 <div className={`flex rounded-full border border-[#4f7668]/20 justify-between items-center bg-transparent transition-colors duration-300 ease-out ${isScrolled ? 'bg-black/30 backdrop-blur-sm' : ''}`}>
-                    {/* The new Link tag will prepend /nn or /en behind the scenes */}
-                    <NavbarButton href="/" isActive={pathname === "/" || pathname.startsWith("/arbeid/")}>Arbeid<IconSlash /></NavbarButton>
-                    <NavbarButton href="/om" isActive={pathname === "/om"}>Om</NavbarButton>
-                    <NavbarButton href="/meir" isActive={pathname === "/meir"}>Meir</NavbarButton>
-                    <NavbarButton href="/kontakt" isActive={pathname === "/kontakt"}>Kontakt</NavbarButton>
+                    <NavbarButton href="/" isActive={pathname === "/" || pathname.startsWith("/arbeid/")}>{t("work")}<IconSlash /></NavbarButton>
+                    <NavbarButton href="/om" isActive={pathname === "/om"}>{t("about")}</NavbarButton>
+                    <NavbarButton href="/meir" isActive={pathname === "/meir"}>{t("more")}</NavbarButton>
+                    <NavbarButton href="/kontakt" isActive={pathname === "/kontakt"}>{t("contact")}</NavbarButton>
                     <NavbarLangButton />
-                    {/* External links should remain standard absolute urls */}
                     <IconLink
                         className="px-6"
                         icon={IconBrandGithub}

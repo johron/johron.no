@@ -1,8 +1,42 @@
 {
-    "HeroSection": {
-        "title1": "Hey! I'm",
-        "title2": "A programmer",
-        "subtitle1": "Hobby programmer for 7+ years and new Computer Science student at",
-        "subtitle2": "in Trondheim"
+    "navbar": {
+        "work": "Work",
+        "about": "About",
+        "more": "More",
+        "contact": "Contact",
+        "activeLabel": "Active"
+    },
+    "footer": {
+        "fontNotice1": "TrialAcorn by",
+        "fontNotice2": "for headings",
+        "source": "Source code",
+        "external": "External sites"
+    },
+    "workPage": {
+        "hero": {
+            "title1": "Hey! I'm",
+            "title2": "I'm a programmer",
+            "subtitle1": "Hobby programmer for 7+ years and new Computer Science student at",
+            "subtitle2": "in Trondheim"
+        },
+        "inProgress": {
+            "title": "In progress",
+            "moose": {
+                "description": "Terminal-based text editor written in Go, inspired by Emacs, Vim and VS Code"
+            }
+        },
+        "inHibernation": {
+            "title": "In hibernation",
+            "glare": {
+                "description": "Modular cross-platform game engine built in Kotlin using LWJGL and OpenGL"
+            },
+            "zelkel": {
+                "description": "Low-level object-oriented programming language"
+            }
+        }
+    },
+    "aboutPage": {
+        "title": "About me",
+        "paragraph": ""
     }
 }
