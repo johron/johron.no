@@ -36,7 +36,7 @@ export function ProjectsSection({title, projects}: ProjectsSectionProps) {
                                 <div className="flex gap-4">
                                     {project.links.map((link) => {
                                         return (
-                                            <IconLink key={link.href} icon={link.icon} href={link.href} openInNewTab={link.openInNewTab}/>
+                                            <IconLink key={link.href} icon={link.icon} href={link.href} openInNewTab={link.openInNewTab} className="hover:bg-white/2 rounded-full p-2"/>
                                         )
                                     })}
                                 </div>

@@ -21,10 +21,10 @@ export function Footer() {
                 <div className="flex flex-col gap-3">
                     <AcornText className="text-2xl font-medium">{t("external")}</AcornText>
                     <Link href="https://github.com/johron" target="_blank">
-                        <Text size="text-md">Github</Text>
+                        <Text size="text-md underline">Github</Text>
                     </Link>
                     <Link href="https://www.linkedin.com/in/johanrong/" target="_blank">
-                        <Text size="text-md">LinkedIn</Text>
+                        <Text size="text-md underline">LinkedIn</Text>
                     </Link>
                 </div>
             </div>
