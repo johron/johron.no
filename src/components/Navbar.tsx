@@ -64,7 +64,7 @@ export function Navbar() {
                     <NavbarButton href="/kontakt" isActive={pathname === "/kontakt"}>{t("contact")}</NavbarButton>
                     <NavbarLangButton />
                     <IconLink
-                        className="px-6"
+                        className="p-2 hover:bg-white/2 rounded-full mx-6"
                         icon={IconBrandGithub}
                         href="https://github.com/johron/"
                         openInNewTab={true}
