@@ -30,7 +30,7 @@
                 "description": "Terminal-based text editor written in Go, inspired by Emacs, Vim and VS Code"
             },
             "zelkel": {
-                "description": "Low-level object-oriented programming language"
+                "description": "Compiled object-oriented programming language"
             }
         },
         "inHibernation": {

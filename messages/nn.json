@@ -30,7 +30,7 @@
                 "description": "Terminalbasert teksteditor skrive i Go, inspirert av Emacs, Vim og VS Code"
             },
             "zelkel": {
-                "description": "Low-level objektorientert programmeringsspråk"
+                "description": "Kompilert objektorientert programmeringsspråk"
             }
         },
         "inHibernation": {
