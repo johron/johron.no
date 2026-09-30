@@ -28,15 +28,15 @@
             "title": "Under utvikling",
             "moose": {
                 "description": "Terminalbasert teksteditor skrive i Go, inspirert av Emacs, Vim og VS Code"
+            },
+            "zelkel": {
+                "description": "Low-level objektorientert programmeringsspråk"
             }
         },
         "inHibernation": {
             "title": "I dvale",
             "glare": {
                 "description": "Modulær, cross-platform game-engine bygd i Kotlin ved hjelp av LWJGL og OpenGL"
-            },
-            "zelkel": {
-                "description": "Low-level objektorientert programmeringsspråk"
             }
         }
     },

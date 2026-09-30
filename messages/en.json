@@ -28,15 +28,15 @@
             "title": "In progress",
             "moose": {
                 "description": "Terminal-based text editor written in Go, inspired by Emacs, Vim and VS Code"
+            },
+            "zelkel": {
+                "description": "Low-level object-oriented programming language"
             }
         },
         "inHibernation": {
             "title": "In hibernation",
             "glare": {
                 "description": "Modular cross-platform game engine built in Kotlin using LWJGL and OpenGL"
-            },
-            "zelkel": {
-                "description": "Low-level object-oriented programming language"
             }
         }
     },
