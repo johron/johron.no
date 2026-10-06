@@ -10,6 +10,23 @@ export default function WorkPage() {
 
   const inProgress = [
     {
+      title: "Zelkel",
+      image: "/projects/zelkel.png",
+      description: t("inProgress.zelkel.description"),
+      links: [
+        {
+          href: "https://github.com/johron/zelkel",
+          icon: IconBrandGithub,
+          openInNewTab: true,
+        },
+        {
+          href: "/arbeid/zelkel",
+          icon: IconAlbum,
+          openInNewTab: false,
+        },
+      ],
+    },
+    {
       title: "Moose",
       image: "/projects/moose.png",
       description: t("inProgress.moose.description"),
@@ -36,18 +53,6 @@ export default function WorkPage() {
       links: [
         {
           href: "https://github.com/johron/glare",
-          icon: IconBrandGithub,
-          openInNewTab: true,
-        },
-      ],
-    },
-    {
-      title: "Zelkel",
-      image: "/projects/zelkel.png",
-      description: t("inHibernation.zelkel.description"),
-      links: [
-        {
-          href: "https://github.com/johron/zelkel",
           icon: IconBrandGithub,
           openInNewTab: true,
         },

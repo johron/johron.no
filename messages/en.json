@@ -28,20 +28,35 @@
             "title": "In progress",
             "moose": {
                 "description": "Terminal-based text editor written in Go, inspired by Emacs, Vim and VS Code"
+            },
+            "zelkel": {
+                "description": "Compiled object-oriented programming language"
             }
         },
         "inHibernation": {
             "title": "In hibernation",
             "glare": {
                 "description": "Modular cross-platform game engine built in Kotlin using LWJGL and OpenGL"
-            },
-            "zelkel": {
-                "description": "Low-level object-oriented programming language"
             }
         }
     },
     "aboutPage": {
         "title": "About me",
         "paragraph": "I have been a hobbyist programmer for about seven years and recently started studying computer science at NTNU in Trondheim. I've worked with programming, electronics, 3D-modeling, networking and servers. I'm very interested in open-source and make all my projects' source available online, just like this website."
+    },
+    "contactPage": {
+        "title": "Contact me",
+        "form": {
+            "name": "Name",
+            "email": "E-mail",
+            "title": "Message title",
+            "message": "Message",
+            "send": {
+                "send": "Send",
+                "sending": "Sending",
+                "error": "Couldn't send",
+                "sent": "Sent"
+            }
+        }
     }
 }
