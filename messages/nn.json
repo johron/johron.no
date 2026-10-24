@@ -13,14 +13,14 @@
         "external": "Andre stadar"
     },
     "notFound": {
-        "title": "Siden vart ikkje funne",
+        "title": "Sida vart ikkje funne",
         "description": "Me fann ikkje sida du leita etter",
         "home": "Gå heim"
     },
     "workPage": {
         "hero": {
             "title1": "Hei, eg er",
-            "title2": "Programvareutvikler",
+            "title2": "Programvareutviklar",
             "subtitle1": "Hobbyprogrammerar i 7+ år og ny informatikkstudent ved",
             "subtitle2": "i Trondheim"
         },
@@ -42,7 +42,7 @@
     },
     "aboutPage": {
         "title": "Om meg",
-        "paragraph": "Eg har vore hobbyprogrammerar i omkring sju år og har nyleg byrja på informatikkstudiet ved NTNU i Trondheim. Eg har jobba med programmering, elektronikk, 3d-modellering, netverk og sørvarar. Eg er særlig interesert i open-source og eg gjer alle prosjekta mine tilgjengeleg på nett, noko som òg gjeld for denne nettsida."
+        "paragraph": "Eg har vore hobbyprogrammerar i omkring sju år og har nyleg byrja på informatikkstudiet ved NTNU i Trondheim. Eg har jobba med programmering, elektronikk, 3D-modellering, nettverk og sørvarar. Eg er særleg interessert i open kjeldekode og eg gjer alle prosjekta mine tilgjengelege på nett, noko som òg gjeld for denne nettsida."
     },
     "contactPage": {
         "title": "Kontakt meg",
