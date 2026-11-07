@@ -64,7 +64,7 @@ export default function WorkPage() {
     <div>
       <main className="flex flex-col justify-center items-center">
         <HeroSection />
-        <div className="flex flex-col gap-32 pt-48">
+        <div className="flex flex-col items-center gap-20 sm:gap-24 lg:gap-32 pt-24 sm:pt-32 lg:pt-48 w-full">
           <ProjectsSection title={t("projectsTitles.progress")} projects={inProgress} />
           <ProjectsSection title={t("projectsTitles.pause")} projects={onPause} />
         </div>

@@ -25,9 +25,12 @@ export function NavbarLangButton() {
     const updateCoords = () => {
         if (buttonRef.current) {
             const rect = buttonRef.current.getBoundingClientRect()
+            const menuWidth = 176 // w-44
+            const margin = 8
+            const maxLeft = window.innerWidth - menuWidth - margin
             setCoords({
                 top: rect.bottom + 8,
-                left: rect.left + rect.width / 2 - 88,
+                left: Math.max(margin, Math.min(rect.left + rect.width / 2 - menuWidth / 2, maxLeft)),
             })
         }
     }
@@ -40,7 +43,7 @@ export function NavbarLangButton() {
     }
 
     useEffect(() => {
-        const handlePointerDown = (event: MouseEvent) => {
+        const handlePointerDown = (event: PointerEvent) => {
             if (
                 buttonRef.current && 
                 !buttonRef.current.contains(event.target as Node) &&
@@ -56,13 +59,13 @@ export function NavbarLangButton() {
             }
         }
 
-        document.addEventListener("mousedown", handlePointerDown)
+        document.addEventListener("pointerdown", handlePointerDown)
         document.addEventListener("keydown", handleKeyDown)
         window.addEventListener("scroll", updateCoords, { passive: true })
         window.addEventListener("resize", updateCoords)
 
         return () => {
-            document.removeEventListener("mousedown", handlePointerDown)
+            document.removeEventListener("pointerdown", handlePointerDown)
             document.removeEventListener("keydown", handleKeyDown)
             window.removeEventListener("scroll", updateCoords)
             window.removeEventListener("resize", updateCoords)
@@ -85,13 +88,13 @@ export function NavbarLangButton() {
             <button
                 ref={buttonRef}
                 type="button"
-                className={`flex items-center gap-2 rounded-full cursor-pointer px-4 py-2 text-sm font-semibold text-[#fffce1]/80 transition-colors duration-300 ease-out hover:text-white hover:bg-white/2 ${isOpen ? "bg-white/10 hover:bg-white/12 text-white" : ""}`}
+                className={`flex items-center gap-2 rounded-full cursor-pointer px-4 py-2.5 text-sm font-semibold text-[#fffce1]/80 transition-colors duration-300 ease-out hover:text-white hover:bg-white/2 ${isOpen ? "bg-white/10 hover:bg-white/12 text-white" : ""}`}
                 aria-haspopup="menu"
                 aria-expanded={isOpen}
                 onClick={toggleOpen}
             >
                 <IconLanguage className="h-5 w-5" />
-                <span className="hidden sm:inline">{currentLanguage.label}</span>
+                <span>{currentLanguage.label}</span>
                 <IconChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
             </button>
 

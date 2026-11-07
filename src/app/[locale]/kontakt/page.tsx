@@ -39,10 +39,10 @@ export default function ContactPage() {
     }
 
     return (
-        <div className="flex flex-col items-center">
-            <AcornText className="text-4xl">{t("title")}</AcornText>
+        <div className="flex flex-col items-center w-full">
+            <AcornText className="text-3xl sm:text-4xl pb-2">{t("title")}</AcornText>
 
-            <form onSubmit={handleSubmit} className="flex flex-col w-2xl gap-3">
+            <form onSubmit={handleSubmit} className="flex flex-col w-full max-w-2xl gap-3">
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium">{t("form.name")}</label>
                     <input
@@ -50,7 +50,7 @@ export default function ContactPage() {
                         id="name"
                         name="name"
                         required
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#07928b] focus:ring-[#07928b] border p-2"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#07928b] focus:ring-[#07928b] border p-2.5 text-base"
                     />
                 </div>
                 <div>
@@ -60,7 +60,7 @@ export default function ContactPage() {
                         id="email"
                         name="email"
                         required
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#07928b] focus:ring-[#07928b] border p-2"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#07928b] focus:ring-[#07928b] border p-2.5 text-base"
                     />
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                         id="title"
                         name="title"
                         required
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#07928b] focus:ring-[#07928b] border p-2"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#07928b] focus:ring-[#07928b] border p-2.5 text-base"
                     />
                 </div>
                 <div>
@@ -80,14 +80,14 @@ export default function ContactPage() {
                         name="message"
                         rows={10}
                         required
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#07928b] focus:ring-[#07928b] border p-2"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#07928b] focus:ring-[#07928b] border p-2.5 text-base"
                     />
                 </div>
                 
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-[#0ab9af] cursor-pointer text-white py-2 px-4 rounded-md hover:bg-[#07928b] disabled:bg-gray-400 disabled:cursor-not-allowed transition"
+                    className="w-full bg-[#0ab9af] cursor-pointer text-white py-3 px-4 rounded-md hover:bg-[#07928b] disabled:bg-gray-400 disabled:cursor-not-allowed transition"
                 >
                     {isSubmitting ? t("form.send.sending") : t("form.send.send")}
                 </button>

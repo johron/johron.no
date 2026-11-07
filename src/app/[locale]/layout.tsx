@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import "@/app/globals.css"
 import localFont from "next/font/local"
 import { Google_Sans } from 'next/font/google'
@@ -63,6 +63,13 @@ export const metadata: Metadata = {
   description: "Personleg portefølje",
 }
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#0e100f",
+}
+
 export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{ locale: string }> }>) {
   const { locale } = await params
 
@@ -75,10 +82,10 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
       lang={locale}
       className={`${googleSans.variable} ${acorn.variable} h-full antialiased`}
     >
-      <body className="flex flex-col min-h-screen">
+      <body className="flex flex-col min-h-dvh">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
-          <div className="min-h-full pt-40 flex flex-col py-12">{children}</div>
+          <div className="min-h-full pt-28 sm:pt-32 lg:pt-40 flex flex-col py-8 sm:py-12 px-4 sm:px-6">{children}</div>
           <Footer />
         </NextIntlClientProvider>
       </body>
