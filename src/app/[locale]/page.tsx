@@ -10,17 +10,17 @@ export default function WorkPage() {
 
   const inProgress = [
     {
-      title: "Zelkel",
-      image: "/projects/zelkel.png",
-      description: t("inProgress.zelkel.description"),
+      title: "Rafn",
+      image: "/projects/rafn.png",
+      description: t("projects.rafn.description"),
       links: [
         {
-          href: "https://github.com/johron/zelkel",
+          href: "https://github.com/rafn-lang/rafn",
           icon: IconBrandGithub,
           openInNewTab: true,
         },
         {
-          href: "/arbeid/zelkel",
+          href: "/arbeid/rafn",
           icon: IconAlbum,
           openInNewTab: false,
         },
@@ -29,7 +29,7 @@ export default function WorkPage() {
     {
       title: "Moose",
       image: "/projects/moose.png",
-      description: t("inProgress.moose.description"),
+      description: t("projects.moose.description"),
       links: [
         {
           href: "https://github.com/johron/moose",
@@ -45,11 +45,11 @@ export default function WorkPage() {
     },
   ]
 
-  const inHibernation = [
+  const onPause = [
     {
       title: "Glare",
       image: "/projects/glare.png",
-      description: t("inHibernation.glare.description"),
+      description: t("projects.glare.description"),
       links: [
         {
           href: "https://github.com/johron/glare",
@@ -65,8 +65,8 @@ export default function WorkPage() {
       <main className="flex flex-col justify-center items-center">
         <HeroSection />
         <div className="flex flex-col gap-32 pt-48">
-          <ProjectsSection title={t("inProgress.title")} projects={inProgress} />
-          <ProjectsSection title={t("inHibernation.title")} projects={inHibernation} />
+          <ProjectsSection title={t("projectsTitles.progress")} projects={inProgress} />
+          <ProjectsSection title={t("projectsTitles.pause")} projects={onPause} />
         </div>
       </main>
     </div>

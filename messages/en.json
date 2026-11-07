@@ -24,17 +24,17 @@
             "subtitle1": "Hobby programmer for 7+ years and new Computer Science student at",
             "subtitle2": "in Trondheim"
         },
-        "inProgress": {
-            "title": "In progress",
+        "projectsTitles": {
+            "progress": "In progress",
+            "pause": "On pause"
+        },
+        "projects": {
             "moose": {
                 "description": "Terminal-based text editor written in Go, inspired by Emacs, Vim and VS Code"
             },
-            "zelkel": {
-                "description": "Compiled object-oriented programming language"
-            }
-        },
-        "inHibernation": {
-            "title": "In hibernation",
+            "rafn": {
+                "description": "Compiled object-oriented programming language using LLVM"
+            },
             "glare": {
                 "description": "Modular cross-platform game engine built in Kotlin using LWJGL and OpenGL"
             }

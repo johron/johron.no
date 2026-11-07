@@ -24,17 +24,17 @@
             "subtitle1": "Hobbyprogrammerar i 7+ år og ny informatikkstudent ved",
             "subtitle2": "i Trondheim"
         },
-        "inProgress": {
-            "title": "Under utvikling",
+        "projectsTitles": {
+            "progress": "Under utvikling",
+            "pause": "På pause"
+        },
+        "projects": {
             "moose": {
                 "description": "Terminalbasert teksteditor skrive i Go, inspirert av Emacs, Vim og VS Code"
             },
-            "zelkel": {
-                "description": "Kompilert objektorientert programmeringsspråk"
-            }
-        },
-        "inHibernation": {
-            "title": "I dvale",
+            "rafn": {
+                "description": "Kompilert objektorientert programmeringsspråk som brukar LLVM"
+            },
             "glare": {
                 "description": "Modulær, cross-platform game-engine bygd i Kotlin ved hjelp av LWJGL og OpenGL"
             }
