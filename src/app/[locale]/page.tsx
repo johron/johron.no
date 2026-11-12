@@ -10,17 +10,17 @@ export default function WorkPage() {
 
   const inProgress = [
     {
-      title: "Rafn",
-      image: "/projects/rafn.png",
-      description: t("projects.rafn.description"),
+      title: "Sleeve",
+      image: "/projects/sleeve.png",
+      description: t("projects.sleeve.description"),
       links: [
         {
-          href: "https://github.com/rafn-lang/rafn",
+          href: "https://github.com/sleeve-lang/sleeve",
           icon: IconBrandGithub,
           openInNewTab: true,
         },
         {
-          href: "/arbeid/rafn",
+          href: "/arbeid/sleeve",
           icon: IconAlbum,
           openInNewTab: false,
         },

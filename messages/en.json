@@ -32,7 +32,7 @@
             "moose": {
                 "description": "Terminal-based text editor written in Go, inspired by Emacs, Vim and VS Code"
             },
-            "rafn": {
+            "sleeve": {
                 "description": "Compiled object-oriented programming language using LLVM"
             },
             "glare": {

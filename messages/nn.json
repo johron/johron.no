@@ -32,7 +32,7 @@
             "moose": {
                 "description": "Terminalbasert teksteditor skrive i Go, inspirert av Emacs, Vim og VS Code"
             },
-            "rafn": {
+            "sleeve": {
                 "description": "Kompilert objektorientert programmeringsspråk som brukar LLVM"
             },
             "glare": {
